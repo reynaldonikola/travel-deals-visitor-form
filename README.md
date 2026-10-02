@@ -1,22 +1,41 @@
-# Visitor Registration Form Website
+# Travel Deals, visitor registration form
 
-This project is a modern visitor registration form built with HTML, CSS, and JavaScript. It features a professional background image, responsive layout, clean styling, and real-time form validation.
+A single-page travel site with a visitor registration form validated entirely in vanilla JavaScript. No framework and no build step.
 
-## Features
-- Responsive design for desktop and mobile
-- Professional full-screen background image
-- Real-time validation feedback
-- Clear error and success messages
-- Modern glass-style form card
-- Clean code structure with separate CSS and JavaScript files
+![Travel Deals](preview.jpg)
 
-## Technologies Used
-- HTML5
-- CSS3
-- JavaScript
+**Live site:** https://reynaldonikola.github.io/personal-website-visitor-formgithub.io/
 
-## Live Demo
-Add your Netlify or GitHub Pages link here.
+## What it does
 
-## Author
-Reynaldo Moros
+- Validates required fields, a two letter US state, a five digit zip, a phone number and an email address, each with its own message under the field
+- Checks a field when you leave it and again on submit, so errors show up where you are, not at the top of the page
+- Requires at least one contact method from a checkbox group
+- Replaces the form with a thank you panel once everything passes
+- Switches sections without a page load, keeping one HTML file
+- Light and dark themes from `prefers-color-scheme`, and animations that turn off under `prefers-reduced-motion`
+
+## How the code is organized
+
+```
+validation.js   the validation library: regexes, per-field rules, custom messages
+page.js         section switching for the single page site
+main.js         wires it together on DOMContentLoaded
+css/main.css    design system in custom properties
+index.html
+images/
+```
+
+`validation.js` sets `setCustomValidity` on each field, so the browser's own form validity stays in sync with the custom messages.
+
+## Running it
+
+```bash
+python3 -m http.server 8000
+```
+
+Then open http://localhost:8000.
+
+## Credits
+
+Photography generated for this project; the parks shown are generic. Built by Reynaldo Moros as coursework at Utah Valley University.
