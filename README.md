@@ -4,7 +4,7 @@ A single-page travel site with a visitor registration form validated entirely in
 
 ![Travel Deals](preview.jpg)
 
-**Live site:** https://reynaldonikola.github.io/personal-website-visitor-formgithub.io/
+**Live site:** https://reynaldonikola.github.io/travel-deals-visitor-form/
 
 ## What it does
 
